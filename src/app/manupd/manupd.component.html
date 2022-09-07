@@ -1,0 +1,16 @@
+<app-mannav></app-mannav>
+<div style="margin-left: 400px">
+<div *ngFor="let i of managers">
+  
+  <div class="card w-50">
+    <div class="card-body">
+      <h5 class="card-title">Name : {{i.name}}</h5>
+      <p class="card-text">Email : {{i.email}}</p>
+      <p class="card-text">Id : {{i.id}}</p>
+
+    <form  method="get" (ngSubmit)="onDelete(i._id)"><button style="margin-left: 200px;margin-bottom: -57px;" type="submit" class="btn btn-outline-danger" data-mdb-ripple-color="dark">Delete!</button></form>
+    <form method="get"  (ngSubmit)="onEdit(i._id)"><button type="submit"  class="btn btn-outline-success" data-mdb-ripple-color="dark">Update</button></form>
+    </div>
+  </div>
+</div>
+</div>
